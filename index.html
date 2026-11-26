@@ -153,11 +153,11 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:co
 .fb em{font:600 18px/1.2 "Baloo 2",sans-serif;font-style:normal;color:var(--ink)}
 .ph.noimg img{display:none}
 .ph.noimg .fb{display:grid}
-.pinfo{display:grid;gap:12px;align-content:center}
+.pinfo{display:grid;gap:12px;align-content:center;background:var(--milk);border:1px solid var(--line);border-radius:20px;padding:clamp(18px,3vw,28px);box-shadow:0 10px 30px -20px #16325f55}
 .pinfo h3{font-size:26px;color:#0c2550}
-.pinfo p{color:#243b66;font-size:17px}
+.pinfo p{color:#12294f;font-size:18px;font-weight:500;line-height:1.55}
 .pinfo ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
-.pinfo li{padding:5px 12px;border-radius:99px;background:var(--milk);border:1px solid var(--line);color:#16325f;font-weight:600;font-size:15px}
+.pinfo li{padding:5px 12px;border-radius:99px;background:var(--tint);border:1px solid var(--line);color:#16325f;font-weight:600;font-size:15px}
 .pinfo .btn{justify-self:start;margin-top:6px}
 @media(min-width:700px){.pbody{grid-template-columns:minmax(0,300px) minmax(0,1fr)}.ph{aspect-ratio:1}}
 @media(max-width:599px){.acc summary{padding:16px 18px;min-height:84px}.acc details::before{background:linear-gradient(90deg,var(--c) 0%,var(--c) 58%,color-mix(in srgb,var(--c) 0%,transparent) 96%),var(--img,none) right center/42% auto no-repeat,var(--c)}.acc summary b{font-size:22px;max-width:64%}.acc summary span{max-width:60%;font-size:15px}.pbody{padding:0 14px 18px;gap:16px}.pinfo .btn{justify-self:stretch}}
