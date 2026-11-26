@@ -12,7 +12,7 @@ Upload as JPG with exactly these names (not `.jpg.png`). Square, about 1000 x 10
 | paneer.jpg | Paneer | Generated, download from Canva: https://www.canva.com/M/MAHcCTmr0KI |
 | taak-lassi.jpg | Taak and lassi | Generated, download from Canva: https://www.canva.com/M/MAHcCYw5vXE |
 | ghee.jpg | Pure ghee | Generated, download from Canva: https://www.canva.com/M/MAHcCSEBGu4 |
-| khava.jpg | Khava | Still needed |
-| shrikhand.jpg | Shrikhand | Still needed |
+| khava.jpg | Khava | In place |
+| shrikhand.jpg | Shrikhand | In place |
 
 If you upload a PNG or a very large file, it still works but loads slowly on phones.
