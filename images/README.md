@@ -9,9 +9,9 @@ Upload as JPG with exactly these names (not `.jpg.png`). Square, about 1000 x 10
 | buffalo-milk.jpg | Buffalo milk | In place |
 | cow-milk.jpg | Cow milk | In place |
 | dahi.jpg | Dahi | In place |
-| paneer.jpg | Paneer | Generated, download from Canva: https://www.canva.com/M/MAHcCTmr0KI |
-| taak-lassi.jpg | Taak and lassi | Generated, download from Canva: https://www.canva.com/M/MAHcCYw5vXE |
-| ghee.jpg | Pure ghee | Generated, download from Canva: https://www.canva.com/M/MAHcCSEBGu4 |
+| paneer.jpg | Paneer | In place |
+| taak-lassi.jpg | Taak and lassi | In place |
+| ghee.jpg | Pure ghee | In place |
 | khava.jpg | Khava | In place |
 | shrikhand.jpg | Shrikhand | In place |
 
