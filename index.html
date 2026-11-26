@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Lokseva Doodh Dairy</title>
+<meta name="description" content="Lokseva Doodh Dairy, Gulmandi, Chhatrapati Sambhajinagar (Aurangabad). 50 years of fresh milk, dahi, paneer and ghee. Wholesale, retail and daily home delivery. Call +91 95189 35481.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Lokseva Doodh Dairy","description":"Dairy in Gulmandi, Chhatrapati Sambhajinagar for 50 years: milk, dahi, paneer, ghee. Wholesale, retail and home delivery.","telephone":"+91-9518935481","address":{"@type":"PostalAddress","streetAddress":"10, Roop Chand Complex, Baroodgar Nala, Gulmandi, Naralibag","addressLocality":"Chhatrapati Sambhajinagar","addressRegion":"Maharashtra","postalCode":"431001","addressCountry":"IN"},"areaServed":"Chhatrapati Sambhajinagar (Aurangabad)"}
+</script>
+<style>
+/* VOICE occasion: a neighbourhood shop that has earned trust, warm and plain-spoken
+   IDEA the painted blue counter of an old Gulmandi dairy, steel milk cans under a marigold toran at dawn
+   PICTURE dawn scene: Bibi Ka Maqbara on the skyline, branded milk cans, a glass of milk and a dahi matka on the counter
+   COLOUR milk white ground, can-blue ink and fields, marigold accent for every call button, terracotta touch
+   TYPE Baloo 2 (shop-sign lettering, Devanagari) + Mukta (text, Devanagari)
+   LAYOUT laptop: headline + buttons left, scene right, trust strip under; phone: title, buttons, scene, strip */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#071530);
+--ink:light-dark(#0d2350,#eef3ff);
+--muted:light-dark(#3d5079,#b4c3e6);
+--blue:light-dark(#1747a6,#6f9bff);
+--deep:light-dark(#0f2f78,#0d2257);
+--sky:light-dark(#e8f0ff,#0f2149);
+--line:light-dark(#cfdcf5,#24396e);
+--gold:#f5ad00;
+--gold-ink:#1d1600;
+--terra:#c4572e;
+--sky1:light-dark(#d6e5ff,#0a1838);
+--sky2:light-dark(#fff1d2,#1d3368);
+--mosque:light-dark(#bfd1f1,#223a75);
+--sun:light-dark(#ffc94a,#e9eefc);
+--counter:light-dark(#1747a6,#13306e);
+--card:light-dark(#ffffff,#0c1d45)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Mukta,system-ui,sans-serif;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.08;letter-spacing:-.015em;margin:0}
+h2{font-size:clamp(30px,4vw,44px);font-weight:800}
+h3{font-size:22px;font-weight:700}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1240px;margin-inline:auto}
+.band{padding-block:clamp(40px,6vw,80px);padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--gold-ink);padding:10px 14px;border-radius:8px;z-index:50}
+.skip:focus{left:16px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;border-radius:14px;font:700 18px/1.1 "Baloo 2",sans-serif;text-decoration:none;border:2px solid transparent;transition:transform .15s,background .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:22px;height:22px;flex:none}
+.call{background:var(--gold);color:var(--gold-ink)}
+.call:hover{background:#ffbd1f}
+.alt{background:transparent;color:var(--ink);border-color:var(--blue)}
+.alt:hover{background:var(--sky)}
+.nowrap{white-space:nowrap}
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:16px;padding-block:10px;padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.brand svg{width:36px;height:42px;flex:none}
+.brand b{font:800 21px/1 "Baloo 2",sans-serif;display:block}
+.brand small{font-size:13px;color:var(--muted);display:block;line-height:1.2}
+.nav{display:none;gap:22px;font-weight:600}
+.nav a{text-decoration:none;padding:8px 0}
+.nav a:hover{color:var(--blue)}
+.tel{font:700 19px/1 "Baloo 2",sans-serif;text-decoration:none;color:var(--blue)}
+.hd .btn{min-height:48px;padding:10px 18px}
+@media(min-width:1000px){.nav{display:flex}}
+@media(max-width:560px){.tel{display:none}.brand small{display:none}.brand b{font-size:19px}.hd .btn{padding:10px 14px;font-size:17px}}
+/* hero */
+.hero{display:grid;gap:clamp(24px,4vw,56px);align-items:center}
+.mr{font:700 20px/1.2 "Baloo 2",sans-serif;color:var(--blue)}
+.hero h1{font-size:clamp(40px,5.6vw,68px);font-weight:800;margin:10px 0 18px}
+.lede{font-size:clamp(18px,1.6vw,20px);color:var(--muted);max-width:34em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ctas .call{font-size:20px;min-height:58px;padding-inline:26px}
+.note{margin-top:14px;font-size:15px;color:var(--muted)}
+.fig{position:relative;min-height:300px;border-radius:24px;overflow:hidden;background:var(--sky1)}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%}
+@media(min-width:900px){.hero{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}.fig{min-height:540px}}
+/* trust strip */
+.strip{background:var(--deep);color:#fff}
+.strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12em),1fr));gap:20px 32px}
+.strip .t{display:flex;gap:14px;align-items:center}
+.strip svg{width:40px;height:40px;flex:none;color:var(--gold)}
+.strip b{display:block;font:800 24px/1.05 "Baloo 2",sans-serif}
+.strip span{display:block;font-size:15px;color:#c9d6f5;line-height:1.3}
+.strip.band{padding-block:28px}
+/* services */
+.head{display:grid;gap:12px;margin-bottom:32px;max-width:46em}
+.head p{color:var(--muted)}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16em),1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:10px;align-content:start}
+.card .ic{width:56px;height:56px;border-radius:14px;background:var(--sky);display:grid;place-items:center;color:var(--blue)}
+.card .ic svg{width:34px;height:34px}
+.card p{color:var(--muted);font-size:16px}
+.card a{font-weight:700;color:var(--blue);text-decoration:none;margin-top:4px}
+.prod{margin-top:48px;display:grid;gap:18px}
+.plist{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15em),1fr));gap:0 36px;border-top:2px solid var(--ink)}
+.plist div{display:grid;grid-template-columns:auto 1fr;gap:0 12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.plist b{font:700 20px/1.2 "Baloo 2",sans-serif}
+.plist i{font-style:normal;color:var(--blue);font-weight:600;justify-self:end}
+.plist p{grid-column:1/-1;color:var(--muted);font-size:16px;line-height:1.45}
+/* why */
+.why{background:var(--sky)}
+.why .wrap{display:grid;gap:36px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13em),1fr));gap:28px}
+.three div{border-top:4px solid var(--blue);padding-top:18px;display:grid;gap:8px}
+.three b{font:800 44px/1 "Baloo 2",sans-serif;color:var(--blue)}
+.three p{color:var(--muted)}
+@media(min-width:900px){.why .wrap{grid-template-columns:minmax(0,4fr) minmax(0,8fr);align-items:start}}
+/* reviews */
+.rev{display:grid;gap:24px;align-items:center;border:2px dashed var(--line);border-radius:24px;padding:clamp(22px,4vw,40px)}
+.rev p{color:var(--muted);max-width:40em;margin-top:10px}
+.stars{display:flex;gap:6px;color:var(--gold)}
+.stars svg{width:30px;height:30px}
+@media(min-width:800px){.rev{grid-template-columns:minmax(0,1fr) auto}}
+/* visit */
+.visit{display:grid;gap:24px}
+@media(min-width:900px){.visit{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--card);display:grid}
+.map iframe{width:100%;height:320px;border:0;display:block;background:var(--sky)}
+.addr{padding:24px;display:grid;gap:14px}
+.addr address{font-style:normal;font-size:18px;line-height:1.5}
+.addr .row{display:flex;flex-wrap:wrap;gap:12px}
+.hours{display:grid;gap:16px;align-content:start}
+.open{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:16px;padding:6px 12px;border-radius:99px;background:var(--sky);width:max-content}
+.open::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--dot,#9aa7c2)}
+.htable{width:100%;border-collapse:collapse;font-size:17px}
+.htable td{padding:10px 0;border-bottom:1px solid var(--line)}
+.htable td:last-child{text-align:right;white-space:nowrap;font-weight:600}
+.areas{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:4px 0 0}
+.areas li{padding:6px 12px;border-radius:99px;border:1px solid var(--line);font-size:15px}
+/* final */
+.final{background:var(--deep);color:#fff;text-align:left}
+.final .wrap{display:grid;gap:20px;align-items:center}
+.final p{color:#c9d6f5;font-size:19px}
+.big{font:800 clamp(34px,5vw,58px)/1 "Baloo 2",sans-serif;color:var(--gold);text-decoration:none;white-space:nowrap}
+.final .alt{color:#fff;border-color:#8fb0ff}
+.final .alt:hover{background:#ffffff1a}
+@media(min-width:900px){.final .wrap{grid-template-columns:minmax(0,1fr) auto}}
+footer{font-size:15px;color:var(--muted);border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer.band{padding-block:28px}
+footer nav{display:flex;gap:18px;flex-wrap:wrap}
+/* phone action bar */
+.bar{display:none}
+@media(max-width:700px){
+.bar{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--bg);border-top:1px solid var(--line);padding:8px max(12px,env(safe-area-inset-left,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-right,0px))}
+.bar a{min-height:54px;font-size:16px;padding:8px}
+body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ EDIT THESE PLACEHOLDERS ============
+  WhatsApp:  replace https://wa.me/91XXXXXXXXXX  (e.g. https://wa.me/919518935481)
+  Instagram: replace https://www.instagram.com/YOUR_HANDLE/
+  Google review link: replace https://g.page/r/YOUR_REVIEW_LINK
+  Hours: edit the HOURS list in the script at the bottom
+================================================== -->
+
+<header>
+  <div class="hd">
+    <a class="brand" href="#top" aria-label="Lokseva Doodh Dairy, home">
+      <svg viewBox="0 0 36 42" aria-hidden="true"><path d="M5 41V18c0-4 3-6 7-8V5h12v5c4 2 7 4 7 8v23z" fill="#1747a6"/><rect x="5" y="22" width="26" height="8" fill="#f5ad00"/><rect x="10" y="2" width="16" height="4" rx="2" fill="#1747a6"/></svg>
+      <span><b>Lokseva Doodh Dairy</b><small>Gulmandi, Chh. Sambhajinagar</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#services">Services</a><a href="#why">Why us</a><a href="#visit">Visit &amp; hours</a>
+    </nav>
+    <a class="tel" href="tel:+919518935481">+91 95189 35481</a>
+    <a class="btn call" href="tel:+919518935481" aria-label="Call Lokseva Doodh Dairy on +91 95189 35481">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      Call now</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="band" id="top" aria-labelledby="h1">
+  <div class="wrap hero">
+    <div>
+      <p class="mr" lang="mr">लोकसेवा दूध डेअरी, गुलमंडी</p>
+      <h1 id="h1">Fresh dairy for Chhatrapati Sambhajinagar, for 50 years</h1>
+      <p class="lede">Cow and buffalo milk, dahi, paneer and pure ghee from our Gulmandi counter. Wholesale supply for hotels, sweet shops and caterers, retail for every household, and home delivery every morning across Aurangabad.</p>
+      <div class="ctas">
+        <a class="btn call" href="tel:+919518935481">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+          Call <span class="nowrap">95189 35481</span></a>
+        <!-- PLACEHOLDER: WhatsApp link -->
+        <a class="btn alt" href="https://wa.me/91XXXXXXXXXX">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+          WhatsApp order</a>
+      </div>
+      <p class="note">Wholesale enquiries welcome. Shop at Roop Chand Complex, Gulmandi.</p>
+    </div>
+    <div class="fig" id="scene"></div>
+  </div>
+</section>
+
+<section class="band strip" aria-label="Why customers trust us">
+  <div class="wrap">
+    <div class="t"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="3"/><path d="M20 10v10l7 5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><div><b>50 years</b><span>in the dairy trade</span></div></div>
+    <div class="t"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 37s12-11 12-21a12 12 0 0 0-24 0c0 10 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="20" cy="16" r="4" fill="currentColor"/></svg><div><b>Gulmandi</b><span>shop in the old city market</span></div></div>
+    <div class="t"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 34h28M10 34V16l10-8 10 8v18M16 34v-9h8v9" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg><div><b>Wholesale</b><span>for hotels, caterers, sweet shops</span></div></div>
+    <div class="t"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="10" cy="30" r="5" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="31" cy="30" r="5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M10 30l6-14h9l6 14M16 16h-4M25 16l2-6h4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Home delivery</b><span>every morning</span></div></div>
+    <!-- UNHIDE when ready: remove the hidden attribute and fill in real values -->
+    <div class="t" hidden><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l13 5v10c0 8-6 14-13 17C13 33 7 27 7 19V9z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M14 20l4 4 8-8" fill="none" stroke="currentColor" stroke-width="3"/></svg><div><b>FSSAI licensed</b><span>Lic. no. 00000000000000</span></div></div>
+    <div class="t" hidden><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4l5 10 11 1.6-8 7.8 1.9 11L20 29l-9.9 5.4 1.9-11-8-7.8L15 14z" fill="currentColor"/></svg><div><b>4.x on Google</b><span>from 000 reviews</span></div></div>
+  </div>
+</section>
+
+<section class="band" id="services" aria-labelledby="sv">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="sv">How we serve Sambhajinagar</h2>
+      <p>One dairy, three ways to buy. The same fresh milk goes into a hotel's chai, a halwai's pedha and your family's morning glass.</p>
+    </div>
+    <div class="svc">
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M6 32V14c0-3 2-5 5-6V3h12v5c3 1 5 3 5 6v18z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M6 19h22" stroke="currentColor" stroke-width="2.5"/></svg></div>
+        <h3>Wholesale supply</h3>
+        <p>Daily milk by the can, plus paneer, dahi and khava in bulk for hotels, restaurants, tea stalls, sweet shops and caterers. Fixed morning drop, steady quality.</p>
+        <a href="tel:+919518935481">Call for wholesale rates</a>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M3 12l3-8h22l3 8M3 12c0 2 2 4 4.5 4S12 14 12 12c0 2 2 4 5 4s5-2 5-4c0 2 2 4 4.5 4S31 14 31 12M5 16v15h24V16M13 31v-8h8v8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+        <h3>Retail counter</h3>
+        <p>Walk in to our Gulmandi shop for loose or packed milk, fresh dahi, paneer cut to weight, ghee and festival sweets like shrikhand.</p>
+        <a href="#visit">See address and hours</a>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="8" cy="26" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="27" cy="26" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M8 26l5-12h8l6 12M13 14H9M21 14l2-6h4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Home delivery</h3>
+        <p>Tell us your daily quantity and preferred time once. Fresh milk reaches your door every morning, so the first chai of the day is never late.</p>
+        <a href="tel:+919518935481">Call to start delivery</a>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 34 34" aria-hidden="true"><rect x="4" y="7" width="26" height="23" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M4 14h26M11 3v7M23 3v7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <h3>Weddings and festivals</h3>
+        <p>Large orders of milk, paneer, dahi and khava for weddings, functions, Ganeshotsav, Diwali and Eid. Book a few days ahead so we can set it aside.</p>
+        <a href="tel:+919518935481">Call to book an order</a>
+      </article>
+    </div>
+
+    <div class="prod">
+      <h3>From our counter</h3>
+      <div class="plist">
+        <div><b>Buffalo milk</b><i lang="mr">म्हशीचे दूध</i><p>Thick and creamy. The choice for chai, kheer and sweets.</p></div>
+        <div><b>Cow milk</b><i lang="mr">गायीचे दूध</i><p>Lighter, for children and daily drinking.</p></div>
+        <div><b>Dahi</b><i lang="mr">दही</i><p>Set fresh every day, thick enough to hold a spoon.</p></div>
+        <div><b>Taak and lassi</b><i lang="mr">ताक</i><p>Cool buttermilk and lassi for Marathwada summers.</p></div>
+        <div><b>Paneer</b><i lang="mr">पनीर</i><p>Soft fresh blocks, cut to weight for homes and kitchens.</p></div>
+        <div><b>Pure ghee</b><i lang="mr">तूप</i><p>Rich aroma for dal, puran poli and pooja.</p></div>
+        <div><b>Khava</b><i lang="mr">खवा</i><p>For pedha, gulab jamun and festival sweets.</p></div>
+        <div><b>Shrikhand</b><i lang="mr">श्रीखंड</i><p>Festival favourite, made to order for Gudi Padwa and functions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band why" id="why" aria-labelledby="wy">
+  <div class="wrap">
+    <div class="head" style="margin:0">
+      <h2 id="wy">Why Aurangabad families and businesses choose us</h2>
+      <p>Counted among the top dairies in the city, built one customer at a time from a single shop in Gulmandi.</p>
+    </div>
+    <div class="three">
+      <div><b>50</b><h3>Years of trust</h3><p>Half a century in the same trade. Many of our customers bought from us as children and now order for their own families.</p></div>
+      <div><b>1</b><h3>Standard for all</h3><p>Wholesale volumes with retail care. The milk that goes to a hotel kitchen is the same milk we sell over the counter.</p></div>
+      <div><b>6 AM</b><h3>At your door</h3><p>Home delivery every morning across the city, so you never queue for milk before work or school.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="reviews" aria-labelledby="rv">
+  <div class="wrap rev">
+    <div>
+      <div class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+      </div>
+      <h2 id="rv" style="margin-top:12px">What our customers say</h2>
+      <p>Customer reviews will appear here soon. Buy from us already? A short Google review helps your neighbours in Sambhajinagar find a dairy they can trust.</p>
+    </div>
+    <!-- PLACEHOLDER: Google review link -->
+    <a class="btn alt" href="https://g.page/r/YOUR_REVIEW_LINK">Write a Google review</a>
+    <!-- To add testimonials later, paste cards like this inside a new .svc grid:
+    <article class="card"><p>"Quote from a real customer."</p><h3>Name, Area</h3></article> -->
+  </div>
+</section>
+
+<section class="band" id="visit" aria-labelledby="vs" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2 id="vs">Visit us in Gulmandi</h2></div>
+    <div class="visit">
+      <div class="map" id="map">
+        <div class="addr">
+          <address>
+            <b>Lokseva Doodh Dairy</b><br>
+            10, Roop Chand Complex, Baroodgar Nala,<br>
+            Gulmandi, Naralibag,<br>
+            Chhatrapati Sambhajinagar, Maharashtra 431001
+          </address>
+          <p>Phone: <a class="tel" href="tel:+919518935481">+91 95189 35481</a></p>
+          <div class="row">
+            <a class="btn call" href="https://www.google.com/maps/search/?api=1&amp;query=Lokseva+Doodh+Dairy+Roop+Chand+Complex+Gulmandi+Chhatrapati+Sambhajinagar+431001">Get directions</a>
+            <a class="btn alt" href="tel:+919518935481">Call the shop</a>
+          </div>
+        </div>
+      </div>
+      <div class="hours">
+        <h3>Business hours</h3>
+        <span class="open" id="open">Checking hours</span>
+        <table class="htable"><tbody id="hrs"></tbody></table>
+        <h3 style="margin-top:12px">Service area</h3>
+        <p>Our retail counter serves the old city around Gulmandi. Wholesale and home delivery cover Chhatrapati Sambhajinagar (Aurangabad), including:</p>
+        <ul class="areas">
+          <li>Gulmandi</li><li>Naralibag</li><li>Aurangpura</li><li>Shahganj</li><li>Paithan Gate</li><li>Samarth Nagar</li><li>Kranti Chowk</li><li>Osmanpura</li><li>Nirala Bazar</li><li>CIDCO</li>
+        </ul>
+        <p class="note" style="margin:0">Not sure we reach your lane? Call and ask.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band final" aria-labelledby="fn">
+  <div class="wrap">
+    <div>
+      <h2 id="fn">Need fresh milk tomorrow morning?</h2>
+      <p style="margin-top:10px">Call today for home delivery, wholesale supply or a festival order.</p>
+      <p style="margin-top:14px"><a class="big" href="tel:+919518935481">+91 95189 35481</a></p>
+    </div>
+    <div class="ctas" style="margin:0">
+      <a class="btn call" href="tel:+919518935481">Call now</a>
+      <!-- PLACEHOLDER: WhatsApp link -->
+      <a class="btn alt" href="https://wa.me/91XXXXXXXXXX">WhatsApp us</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p><b>Lokseva Doodh Dairy</b>, 10 Roop Chand Complex, Gulmandi, Chhatrapati Sambhajinagar 431001 · <a href="tel:+919518935481">+91 95189 35481</a></p>
+    <nav aria-label="Social">
+      <!-- PLACEHOLDER: Instagram link -->
+      <a href="https://www.instagram.com/YOUR_HANDLE/">Instagram</a>
+      <!-- PLACEHOLDER: WhatsApp link -->
+      <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
+    </nav>
+    <p>© <span id="yr">2026</span> Lokseva Doodh Dairy</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn call" href="tel:+919518935481">Call now</a>
+  <!-- PLACEHOLDER: WhatsApp link -->
+  <a class="btn alt" href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
+  <a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=Lokseva+Doodh+Dairy+Roop+Chand+Complex+Gulmandi+Chhatrapati+Sambhajinagar+431001">Map</a>
+</nav>
+
+<script>
+{
+/* Business hours: edit to your real timings. Times are 24h, India time. */
+const HOURS=[
+  {d:"Monday to Saturday",o:"05:30",c:"22:30"},
+  {d:"Sunday",o:"05:30",c:"22:30"}
+];
+const fmt=t=>{let[h,m]=t.split(":").map(Number);const ap=h>=12?"PM":"AM";h=h%12||12;return h+":"+String(m).padStart(2,"0")+" "+ap};
+document.getElementById("hrs").innerHTML=HOURS.map(r=>`<tr><td>${r.d}</td><td>${fmt(r.o)} to ${fmt(r.c)}</td></tr>`).join("");
+const openEl=document.getElementById("open");
+try{
+  const p=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Kolkata",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+  const g=k=>p.find(x=>x.type===k).value;
+  const mins=Number(g("hour"))%24*60+Number(g("minute"));
+  const row=g("weekday")==="Sun"?HOURS[1]:HOURS[0];
+  const toM=t=>{const[h,m]=t.split(":").map(Number);return h*60+m};
+  const isOpen=mins>=toM(row.o)&&mins<toM(row.c);
+  openEl.textContent=isOpen?"Open now, closes "+fmt(row.c):"Closed now, opens "+fmt(row.o);
+  openEl.style.setProperty("--dot",isOpen?"#1fa85a":"#d2452f");
+}catch(e){openEl.hidden=true}
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+/* Live Google map on the real website; skipped inside sandboxed previews that block embeds */
+if(!/claude|anthropic/i.test(location.hostname)){
+  const f=document.createElement("iframe");
+  f.title="Map to Lokseva Doodh Dairy, Gulmandi";f.loading="lazy";f.referrerPolicy="no-referrer-when-downgrade";
+  f.src="https://www.google.com/maps?q="+encodeURIComponent("Roop Chand Complex, Gulmandi, Chhatrapati Sambhajinagar 431001")+"&output=embed";
+  document.getElementById("map").prepend(f);
+}
+
+/* Hero scene */
+const can=(x,s,lbl)=>`<g transform="translate(${x} 440) scale(${s})">
+<ellipse cx="22" cy="2" rx="80" ry="9" fill="#000" opacity=".16"/>
+<path d="M-62 0V-128C-62-150-50-160-30-168V-186H30V-168C50-160 62-150 62-128V0Z" fill="url(#metal)"/>
+<path d="M18 0V-174H30V-168C50-160 62-150 62-128V0Z" fill="#0b1f4a" opacity=".14"/>
+<rect x="-62" y="-104" width="124" height="38" fill="#1747a6"/>
+<text x="0" y="-78" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="21" fill="#fff" stroke="none" style="paint-order:normal">${lbl}</text>
+<rect x="-62" y="-104" width="124" height="5" fill="#f5ad00"/>
+<rect x="-62" y="-50" width="124" height="5" fill="#7f93aa" opacity=".6"/>
+<rect x="-64" y="-9" width="128" height="9" rx="3" fill="#7f93aa"/>
+<rect x="-40" y="-160" width="9" height="150" rx="4.5" fill="#fff" opacity=".55"/>
+<path d="M-62-132q-20 9 0 26" fill="none" stroke="#8ea2b9" stroke-width="6"/>
+<path d="M62-132q20 9 0 26" fill="none" stroke="#6d8199" stroke-width="6"/>
+<rect x="-35" y="-194" width="70" height="10" rx="3" fill="#a9b9cc"/>
+<ellipse cx="0" cy="-196" rx="40" ry="8" fill="#dfe8f2"/>
+<path d="M-14-201q14-22 28 0" fill="none" stroke="#8ea2b9" stroke-width="5"/></g>`;
+let seed=7;const rnd=()=>(seed=seed*16807%2147483647)/2147483647;
+let toran="";
+for(let x=10;x<=800;x+=34){
+  const len=16+rnd()*10;
+  toran+=`<line x1="${x}" y1="18" x2="${x}" y2="${18+len}" stroke="#7a5a12" stroke-width="1.2"/>
+<path d="M${x+17} 20q-6 16 0 30q6-14 0-30z" fill="#2f8a3c"/>
+<circle cx="${x}" cy="${24+len}" r="11" fill="${rnd()>.4?'#f5ad00':'#f07c12'}"/><circle cx="${x}" cy="${24+len}" r="5.5" fill="#d9600a" opacity=".7"/>`;
+}
+document.getElementById("scene").innerHTML=`<svg viewBox="0 0 800 520" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Steel milk cans marked Lokseva, a glass of milk and a pot of dahi on a blue dairy counter, with Bibi Ka Maqbara on the Aurangabad skyline at dawn">
+<defs>
+<linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--sky1)"/><stop offset="1" stop-color="var(--sky2)"/></linearGradient>
+<linearGradient id="metal" x1="0" x2="1"><stop offset="0" stop-color="#9fb3c8"/><stop offset=".3" stop-color="#f4f8fc"/><stop offset=".7" stop-color="#c3d0de"/><stop offset="1" stop-color="#7f93aa"/></linearGradient>
+<linearGradient id="pot" x1="0" x2="1"><stop offset="0" stop-color="#e07a4a"/><stop offset="1" stop-color="#9c3f1e"/></linearGradient>
+</defs>
+<rect width="800" height="520" fill="url(#sk)"/>
+<circle cx="640" cy="250" r="54" fill="var(--sun)" opacity=".9"/>
+<g fill="var(--mosque)">
+<rect x="250" y="372" width="440" height="60"/>
+<rect x="400" y="280" width="140" height="92"/>
+<rect x="396" y="262" width="18" height="20"/><circle cx="405" cy="258" r="10"/>
+<rect x="526" y="262" width="18" height="20"/><circle cx="535" cy="258" r="10"/>
+<rect x="440" y="248" width="60" height="34"/>
+<path d="M434 252C418 214 440 190 470 168C500 190 522 214 506 252Z"/>
+<rect x="469" y="136" width="2.5" height="34"/><circle cx="470.2" cy="146" r="3.5"/>
+<rect x="294" y="216" width="13" height="156"/><rect x="290" y="208" width="21" height="9"/><circle cx="300.5" cy="202" r="8"/>
+<rect x="633" y="216" width="13" height="156"/><rect x="629" y="208" width="21" height="9"/><circle cx="639.5" cy="202" r="8"/>
+</g>
+<path d="M455 372V326Q470 302 485 326V372Z" fill="var(--sky2)" opacity=".75"/>
+<rect x="0" y="432" width="800" height="88" fill="var(--counter)"/>
+<rect x="0" y="432" width="800" height="7" fill="#fff" opacity=".85"/>
+<rect x="0" y="466" width="800" height="3" fill="#f5ad00" opacity=".8"/>
+<g>${toran}<path d="M0 18H800" stroke="#7a5a12" stroke-width="2"/></g>
+${can(180,.74,"लोकसेवा")}${can(455,.92,"LOKSEVA")}${can(318,1.12,"लोकसेवा")}
+<g>
+<ellipse cx="582" cy="441" rx="40" ry="6" fill="#000" opacity=".15"/>
+<path d="M548 440L541 336H603L596 440Z" fill="#eef5ff" opacity=".5" stroke="#9fb3c8" stroke-width="2"/>
+<path d="M549 438L543 352H601L595 438Z" fill="#fffdf7"/>
+<ellipse cx="572" cy="352" rx="29" ry="4" fill="#fff"/>
+<rect x="556" y="360" width="5" height="70" rx="2.5" fill="#fff" opacity=".9"/>
+</g>
+<g>
+<ellipse cx="690" cy="441" rx="52" ry="7" fill="#000" opacity=".16"/>
+<path d="M652 380C628 400 630 432 660 440H720C750 432 752 400 728 380Z" fill="url(#pot)"/>
+<rect x="650" y="370" width="80" height="12" rx="6" fill="#b04a24"/>
+<ellipse cx="690" cy="371" rx="36" ry="6" fill="#fffaf0"/>
+<path d="M640 410H740" stroke="#7d3017" stroke-width="2" opacity=".5"/>
+</g>
+</svg>`;
+}
+</script>
+</body>
+</html>
