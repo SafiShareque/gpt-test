@@ -21,22 +21,21 @@
    TYPE Baloo 2 (rounded, milky display, Devanagari for decoration) + Mukta (text)
    LAYOUT phone first: photo on top fading into the headline, then buttons; laptop: statement left over blended photo right */
 :root{color-scheme:light;
---bg:light-dark(#fbfcff,#0a1630);
---milk:light-dark(#ffffff,#0f1e3d);
---tint:light-dark(#eef5fd,#102246);
---tint2:light-dark(#dce9fa,#183060);
---ink:light-dark(#16325f,#eaf1ff);
---muted:light-dark(#3d5179,#a9bbdd);
---blue:light-dark(#2f6cc6,#82b2ff);
---on-blue:light-dark(#ffffff,#08142c);
---line:light-dark(#dbe6f5,#22385f);
---deco:light-dark(#e3eefb,#132a55);
---s1:light-dark(#ffffff,#1c3a72);
---s2:light-dark(#cfe1f8,#0c1b3b);
---s3:light-dark(#b9d3f4,#12285a);
---shadow:light-dark(0 18px 40px -24px #2f6cc655,0 18px 40px -24px #000a)}
-:root[data-theme=light]{color-scheme:light}
-:root[data-theme=dark]{color-scheme:light}
+--bg:#fbfcff;
+--milk:#ffffff;
+--tint:#eef5fd;
+--tint2:#dce9fa;
+--ink:#16325f;
+--muted:#3d5179;
+--blue:#2f6cc6;
+--on-blue:#ffffff;
+--line:#dbe6f5;
+--deco:#e3eefb;
+--s1:#ffffff;
+--s2:#cfe1f8;
+--s3:#b9d3f4;
+--shadow:0 18px 40px -24px #2f6cc655}
+:root,:root[data-theme],html,body{color-scheme:light!important}
 *{box-sizing:border-box;min-width:0}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
