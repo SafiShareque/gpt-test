@@ -1,0 +1,67 @@
+# CI = Continuous Integration.
+# Every pull request is checked automatically before it can be merged.
+# The Deploy workflow also calls this file first, so nothing broken is ever deployed.
+
+name: CI
+
+on:
+  pull_request:
+    branches: [develop, main]
+  workflow_call: # lets deploy.yml reuse these exact checks
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Site checks and test build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run site checks
+        run: node scripts/check.mjs
+
+      - name: Test build (development)
+        run: node scripts/build.mjs --env development --out _site/dev
+
+      - name: Test build (production)
+        run: node scripts/build.mjs --env production --out _site
+
+  release-rules:
+    # Only for pull requests into main (= going to production).
+    name: Release rules for main
+    if: github.event_name == 'pull_request' && github.base_ref == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Only develop or hotfix/* may go to main
+        run: |
+          case "${{ github.head_ref }}" in
+            develop|hotfix/*) echo "ok: ${{ github.head_ref }} -> main" ;;
+            *) echo "::error::Pull requests into main must come from develop (or a hotfix/ branch), not '${{ github.head_ref }}'."; exit 1 ;;
+          esac
+
+      - name: Get the code with main's history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: VERSION must be bumped for a release
+        run: |
+          new="$(cat VERSION)"
+          old="$(git show origin/main:VERSION 2>/dev/null || echo none)"
+          echo "main is at: $old, this pull request brings: $new"
+          if [ "$old" = "$new" ]; then
+            echo "::error file=VERSION::VERSION is still $new. Bump it (for example to the next patch or minor) and add a CHANGELOG entry before releasing."
+            exit 1
+          fi
+          if ! grep -q "## \[$new\]" CHANGELOG.md; then
+            echo "::error file=CHANGELOG.md::CHANGELOG.md has no section for [$new]."
+            exit 1
+          fi

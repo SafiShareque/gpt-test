@@ -1,0 +1,145 @@
+# CD = Continuous Delivery / Deployment.
+#
+#   push to develop  ->  checks -> build -> [development] gate -> deploy   (site/dev/)
+#   push to main     ->  checks -> build -> [production] gate  -> deploy   (site root)
+#                                                                -> release (tag + GitHub Release)
+#
+# GitHub Pages hosts ONE site per repository, so every deploy publishes both:
+#   production  = main     at  /
+#   development = develop  at  /dev/
+# A push to develop rebuilds production from main unchanged, and vice versa.
+
+name: Deploy
+
+on:
+  push:
+    branches: [main, develop]
+  workflow_dispatch: # "Run workflow" button for manual re-deploys
+
+# Never run two deployments at once; queue them instead.
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: Checks
+    uses: ./.github/workflows/ci.yml
+
+  build:
+    name: Build production and development
+    needs: checks
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+    outputs:
+      base_url: ${{ steps.pages.outputs.base_url }}
+    steps:
+      - name: Get production code (main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: prod
+
+      - name: Get development code (develop)
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          path: dev
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Read GitHub Pages settings
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build production (main -> /)
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          if [ -f prod/scripts/build.mjs ]; then
+            GITHUB_SHA="$(git -C prod rev-parse HEAD)" node prod/scripts/build.mjs --root prod --env production --out _site
+          else
+            # Only until the pipeline itself reaches main: main still has the old layout.
+            echo "::warning::main has no build script yet, publishing its files unchanged"
+            mkdir -p _site && cp -r prod/index.html prod/images _site/
+          fi
+
+      - name: Build development (develop -> /dev/)
+        run: GITHUB_SHA="$(git -C dev rev-parse HEAD)" node dev/scripts/build.mjs --root dev --env development --out _site/dev
+
+      - name: Package the site for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  gate:
+    # This job exists so each branch deploys through its own named environment.
+    # Settings > Environments > production > "Required reviewers" makes this job
+    # wait for your approval before anything reaches the live site.
+    name: Approve ${{ github.ref_name == 'main' && 'production' || 'development' }}
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref_name == 'main' && 'production' || 'development' }}
+      url: ${{ needs.build.outputs.base_url }}${{ github.ref_name == 'main' && '/' || '/dev/' }}
+    steps:
+      - name: Summary
+        run: |
+          echo "### Deploying ${{ github.ref_name == 'main' && 'production' || 'development' }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Commit: ${{ github.sha }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "URL: ${{ needs.build.outputs.base_url }}${{ github.ref_name == 'main' && '/' || '/dev/' }}" >> "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    name: Publish to GitHub Pages
+    needs: gate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  release:
+    # After a successful production deploy, tag the commit (v1.0.0, v1.1.0, ...)
+    # and publish a GitHub Release with the notes from CHANGELOG.md.
+    name: Tag release
+    if: github.ref_name == 'main'
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create tag and GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          v="v$(cat VERSION)"
+          if git rev-parse -q --verify "refs/tags/$v" >/dev/null; then
+            echo "::notice::$v already exists. Bump VERSION to publish a new release."
+            exit 0
+          fi
+          awk -v ver="$(cat VERSION)" '
+            $0 ~ "^## \\[" ver "\\]" {on=1; next}
+            on && /^## \[/ {exit}
+            on {print}
+          ' CHANGELOG.md > notes.md
+          gh release create "$v" --target "$GITHUB_SHA" --title "$v" --notes-file notes.md
+          echo "Released $v" >> "$GITHUB_STEP_SUMMARY"
