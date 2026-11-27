@@ -1,6 +1,6 @@
 # Site photos
 
-The page loads these files. Any missing photo shows a clean placeholder tile instead.
+Photos live in `site/images/`. The page loads these files. Any missing photo shows a clean placeholder tile instead.
 Upload as JPG with exactly these names (not `.jpg.png`). Square, about 1000 x 1000 px, under 300 KB is ideal.
 
 | File | Used for | Status |
